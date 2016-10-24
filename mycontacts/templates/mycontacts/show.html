@@ -1,0 +1,21 @@
+{% extends 'mycontacts/background.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="container-show">
+    <ul class="grid" style="list-style-type: none">
+        
+    {% for contact in contacts %}
+    <li>
+        <div>
+            <h2 class="name">{{ contact.name }}</h2>
+            <div class="relation">{{ contact.relation }}</div>
+            <div class="phone">{{ contact.phone }}</div>
+            <div class="email"><a href='{{ contact.email }}'>{{ contact.email }}</a> </div>
+        </div>
+    </li>
+    {%  endfor %}
+    
+    </ul>
+</div>      
+{% endblock content %}

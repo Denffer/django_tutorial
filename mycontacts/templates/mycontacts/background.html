@@ -1,0 +1,43 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+        
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+
+    <!--latest Bootstrap theme-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{% static 'css/show.css' %}">
+    <link rel="stylesheet" href="{% static 'css/add.css' %}">
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <script type="text/javascript" src="{% static 'js/show.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/add.js' %}"></script>
+    
+    <title> My Contacts </title>
+
+</head>
+<body>
+    <div class="header">
+        <h2><a href="/">My Contacts</a></h2>
+        <div class="pull-right">
+		    <a href="/add">Add</a> 
+		    <!--<a href="{% url 'add'}">Add</a>-->
+		</div>
+    </div>
+    <div class="body">
+            {% block content %}
+            {% endblock content %}
+    </div>   
+    <div class="footer">
+        <h2>Django Introduction & Tutorial</h2>
+        <p>Presented by <a href="https://www.facebook.com/denffer18">Denffer</a></p>
+    </div>
+</body>
+</html>
